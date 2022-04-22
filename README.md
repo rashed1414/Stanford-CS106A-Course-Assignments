@@ -71,7 +71,7 @@ you can use an online karel IDE to try karel experiance by yourself  [Karel IDE]
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [LinkedIn](https://www.linkedin.com/in/14-rashed/) - rashed.work609@gmail.com
+RASHED - [LinkedIn](https://www.linkedin.com/in/14-rashed/) - rashed.work609@gmail.com
 
 
 
