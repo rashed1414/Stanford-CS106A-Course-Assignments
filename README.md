@@ -64,9 +64,7 @@ In order to use these file you must have :
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+you can use an online karel IDE to try karel experiance by yourself  [Karel IDE](https://stanford.edu/~cpiech/karel/ide.html)
 
 
 
