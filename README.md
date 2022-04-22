@@ -34,49 +34,31 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Course HomePage ][product-screenshot]](https://see.stanford.edu/course/cs106a)
+[![Course HomePage - CS106A ][product-screenshot]](https://see.stanford.edu/course/cs106a)
 
 
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+This project bult with java Programming Language 
+
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Few Steps to get every thing work fine with you.
 
 ### Prerequisites
+In order to use these file you must have :  
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+1. java installed on your machine.
+2. required library for the project --> acm/karel
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+1. install acm library from  [Download Library directly](https://cs.stanford.edu/people/eroberts/jtf/acm.jar)  - [Visit Home Page](https://cs.stanford.edu/people/eroberts/jtf/) - [Docs Page](https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/)
+2. Clone the 
 
 
 <!-- USAGE EXAMPLES -->
