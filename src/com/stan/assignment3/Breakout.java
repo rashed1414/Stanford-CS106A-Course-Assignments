@@ -34,7 +34,7 @@ public class Breakout extends GraphicsProgram {
 	private static final int NBRICKS_PER_ROW = 10;
 
 /** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 10;
+	private static final int NBRICKS_ROWS = 10;
 
 /** Separation between bricks */
 	private static final int BRICK_SEP = 4;
@@ -71,7 +71,7 @@ public class Breakout extends GraphicsProgram {
 
 /** Ball Velocity */
 	private double vx,vy;
-/** gameStaus Variables */
+/** gameStatus Variables */
 	private int turn;
 	private boolean endGame=false;
 
@@ -87,7 +87,6 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		addMouseListeners(this);
-		addKeyListener(this);
 		setup();
 		while(!endGame) {
 			printScore();
@@ -152,7 +151,7 @@ public class Breakout extends GraphicsProgram {
  *  used by: this Method used by setup() Method*/
 	private void createBricks() {
 		int newY=BRICK_Y_OFFSET;
-		for (int i=0;i<NBRICK_ROWS;i++){
+		for (int i = 0; i< NBRICKS_ROWS; i++){
 			int newX=BRICK_X_OFFSET;
 			for(int j=0;j<NBRICKS_PER_ROW;j++){
 				GRect brick = new GRect(newX, newY, BRICK_WIDTH, BRICK_HEIGHT);
@@ -262,23 +261,50 @@ public class Breakout extends GraphicsProgram {
 	private void checkForBricksCollision() {
 
 		if (getElementAt(ball.getX(),ball.getY()) != null &&
-				getElementAt(ball.getX(),ball.getY()) !=pad ){
+			getElementAt(ball.getX(),ball.getY()) !=pad ){
 
 			brickStatus(getElementAt(ball.getX(),ball.getY()));
 			vy =-vy;
 			ball.move(vx,vy);
-		}
-		if (getElementAt(ball.getX(),ball.getY()+BALL_RADIUS) != null &&
-				getElementAt(ball.getX(),ball.getY()+BALL_RADIUS)!=pad){
 
-			brickStatus(getElementAt(ball.getX(),ball.getY()+BALL_RADIUS));
-			vy = -vy;
+		} else if (getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()) != null &&
+				   getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()) !=pad ) {
+
+			brickStatus(getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()));
+			vy =-vy;
 			ball.move(vx,vy);
 
+		} else if (getElementAt(ball.getX(),ball.getY()+BALL_RADIUS) != null &&
+				   getElementAt(ball.getX(),ball.getY()+BALL_RADIUS)!=pad) {
+
+			brickStatus(getElementAt(ball.getX(),ball.getY()+BALL_RADIUS));
+			vy =-vy;
+			ball.move(vx,vy);
+
+		} else if (getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+BALL_RADIUS) != null &&
+				   getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+BALL_RADIUS)!=pad) {
+
+			brickStatus(getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+BALL_RADIUS));
+			vy =-vy;
+			ball.move(vx,vy);
+
+		} else if (getElementAt(ball.getX(),ball.getY()+(BALL_RADIUS/2.0)) != null &&
+				   getElementAt(ball.getX(),ball.getY()+(BALL_RADIUS/2.0)) !=pad ) {
+
+			brickStatus(getElementAt(ball.getX(),ball.getY()+(BALL_RADIUS/2.0)));
+			vy =-vy;
+			ball.move(vx,vy);
+
+		} else if (getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+(BALL_RADIUS/2.0)) != null &&
+				   getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+(BALL_RADIUS/2.0)) !=pad ) {
+
+			brickStatus(getElementAt(ball.getX()+(BALL_RADIUS*2),ball.getY()+(BALL_RADIUS/2.0)));
+			vy =-vy;
+			ball.move(vx,vy);
 		}
-
-
 	}
+
+
 
 /**  Method: brickStatus()
  *  Usage: this Method used to change brick's color to add more fun to user
@@ -298,6 +324,8 @@ public class Breakout extends GraphicsProgram {
 			element.setColor(Color.ORANGE);
 		}
 	}
+
+
 
 	/**  Method: checkPadCollision()
  *  Usage: this Method used to check the collision on paddle
@@ -321,6 +349,5 @@ public class Breakout extends GraphicsProgram {
 			pad.setLocation(e.getX(),(HEIGHT-PADDLE_Y_OFFSET*2));
 
 	}
-	//TODO key listener
 
 }
